@@ -20,70 +20,65 @@
 			</div>
 		</div>
 		<div class="row">
-		<select class="selectpicker" data-style="btn-primary"">
-		<button type="button" class="btn dropdown-toggle btn-primary" data-toggle="dropdown" role="button" title="Mustard" aria-expanded="false"><span class="filter-option pull-left">Mustard</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
-	 <option></option>
-    <option></option>
-    <option></option>
-    <option></option>
-    <option></option>
-    </select>
 			<div class="col-sm-4">
-				<div class="tile purple">
-					<h3 class="title">Purple Tile</h3>
-					<p>Hello Purple, this is a colored tile.</p>
-				</div>
+				<ul class="dropdown trigger tile purple">
+					<h2 class="dropdown-title">Choose your option</h2>
+			
+					<li class="dropdown-list list">jQuery Plugins</li>
+					<li class="dropdown-list list">Google.com</li>
+					<li class="dropdown-list list">Youtube.com</li>
+					<li class="dropdown-list list"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
+				</ul>
 			</div>
 			<div class="col-sm-4">
-				<div class="tile red">
-					<h3 class="title">Red Tile</h3>
-					<p>Hello Red, this is a colored tile.</p>
-				</div>
+				<ul class="dropdown trigger tile red">
+					<h2 class="dropdown-title">Choose your option</h2>
+					<li class="dropdown-list list">jQuery Plugins</li>
+					<li class="dropdown-list list">Google.com</li>
+					<li class="dropdown-list list">Youtube.com</li>
+					<li class="dropdown-list list"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
+				</ul>
 			</div>
 			<div class="col-sm-4">
-				<div class="tile orange">
-					<h3 class="title">Orange Tile</h3>
-					<p>Hello Orange, this is a colored tile.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="tile green">
-					<h3 class="title">Green Tile</h3>
-					<p>Hello Green, this is a colored tile.</p>
-				</div>
+				<ul class="dropdown trigger tile orange">
+					<h2 class="dropdown-title">Choose your option</h2>
+					<li class="dropdown-list list">jQuery Plugins</li>
+					<li class="dropdown-list list">Google.com</li>
+					<li class="dropdown-list list">Youtube.com</li>
+					<li class="dropdown-list list"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
+				</ul>
 			</div>
 			<div class="col-sm-4">
-				<div class="tile blue">
-					<h3 class="title">Blue Tile</h3>
-					<p>Hello Blue, this is a colored tile.</p>
-				</div>
+				<ul class="dropdown trigger tile green">
+					<h2 class="dropdown-title">Choose your option</h2>
+					<li class="dropdown-list list">jQuery Plugins</li>
+					<li class="dropdown-list list">Google.com</li>
+					<li class="dropdown-list list">Youtube.com</li>
+					<li class="dropdown-list list"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
+				</ul>
 			</div>
 			<div class="col-sm-4">
-				<div class="tile blue">
-					<h3 class="title">Blue Tile</h3>
-					<p>Hello Blue, this is a colored tile.</p>
-				</div>
+				<ul class="dropdown trigger tile blue">
+					<h2 class="dropdown-title">Choose your option</h2>
+					<li class="dropdown-list list">jQuery Plugins</li>
+					<li class="dropdown-list list">Google.com</li>
+					<li class="dropdown-list list">Youtube.com</li>
+					<li class="dropdown-list list"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
+				</ul>
 			</div>
-			<div class="col-sm-4">
-				<div class="tile blue">
-					<h3 class="title">Blue Tile</h3>
-					<p>Hello Blue, this is a colored tile.</p>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="tile blue">
-					<h3 class="title">Blue Tile</h3>
-					<p>Hello Blue, this is a colored tile.</p>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="tile blue">
-					<h3 class="title">Blue Tile</h3>
-					<p>Hello Blue, this is a colored tile.</p>
-				</div>
-			</div>
+
+			
 		</div>
 	</div>
 </div>
+
+<script>
+var trigger = '.trigger';
+var list = '.list';
+function toggleIt() {
+$(list).slideToggle(200, 'linear');
+}
+$(trigger).on('click', function () {
+toggleIt();
+});
+</script>

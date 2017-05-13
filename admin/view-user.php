@@ -28,7 +28,7 @@ include "../includes/navbar-dash.inc.php";
         // display all the rows from the table into the form
         while($row = mysqli_fetch_array($result)) {
             echo "<tr>";
-                echo "<td>".$row["id"]."</td>";
+                echo "<td>".$row["ID"]."</td>";
                 echo "<td>".$row["first"]."</td>";
                 echo "<td>".$row["last"]."</td>";
                 echo "<td>".$row["email"]."</td>";
