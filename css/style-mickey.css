@@ -56,15 +56,7 @@ margin: 20px 0 10px;
 
 
 
-.selectpicker {
-    width: 100%;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #57bab6;
-    padding: 20px;
-    margin-bottom: 30px;
-    height: 100px;
-}
+
 
 .form1 {
     padding-top: 50px;
@@ -113,7 +105,7 @@ margin: 20px 0 10px;
 
 .dropdown-title {
   position: relative;
-  background: rgba(0, 0, 0, 0.1);
+
   padding: .5em;
   font-weight: 100;
   color: #fff;
@@ -126,7 +118,7 @@ margin: 20px 0 10px;
   top: 0;
   bottom: 0;
   content: "";
-  background: rgba(0, 0, 0, 0.1);
+  
   width: 55px;
   height: 100%;
   -webkit-transition: .4s .3s;
@@ -154,12 +146,12 @@ margin: 20px 0 10px;
   list-style: none;
   padding: .9em;
   color: #fff;
-  font-weight: 100;
+  font-weight: 120;
   cursor: pointer;
 }
 
 .dropdown-list:hover { background: rgba(0, 0, 0, 0.2); }
 
-.dropdown-list:nth-child(odd) { background: rgba(0, 0, 0, 0.1); }
+
 
 .dropdown-list:nth-child(odd):hover { background: rgba(0, 0, 0, 0.2); }
