@@ -1,0 +1,182 @@
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+.footer {
+position:absolute;
+bottom: 0;
+width: 100%;
+height: 50px;   /* Height of the footer */
+background: #363636;
+margin-bottom: -50px;
+
+}
+
+html, body {
+margin : 0;
+padding : 0;
+height: 100%;
+}
+
+.text-muted {
+color: #e3e3e3;
+text-align: center;
+font-size: 12px;
+margin: 20px 0 10px;
+}
+
+
+.navbar-inverse {
+	background-color: #363636;
+}
+
+
+.form-box {
+	text-align: center;
+	padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+ .navbar {
+    border-radius: 0px;
+ }
+
+/*select {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #57bab6;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 32%;
+}*/
+
+
+
+
+
+
+
+.form1 {
+    padding-top: 50px;
+
+}
+
+.form-control {
+    width: 80%;
+}
+
+.able {
+    width: 100%;
+}
+
+.btn-info {
+  background-color: #00bdaa;
+}
+
+.btn-edit {
+  padding: 10px;
+}
+
+.btn-remove {
+  padding: 10px;
+}
+
+
+
+
+.navbar-brand {
+  padding: 0px;
+}
+
+#heading {
+  font: normal 400 2.8em/2.5em Arial,"Times New Roman", serif;
+  font-weight: 700px;
+}
+
+.navbar-brand>img {
+  height: 100%;
+  padding: px;
+  width: auto;
+}
+
+
+.add-next-page {
+      padding-top: 70px;
+}
+
+.pages {
+      padding-bottom: 50px;
+      float: left;
+}
+
+.add-btn {
+  background-color: #00bdaa;
+    padding: 20px 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 0px;
+    float: right;
+}
+
+
+
+.dropdown {
+  max-width: 350px;
+  margin: 2em auto;
+  background: #2980b9;
+}
+
+.dropdown-title {
+  position: relative;
+
+  padding: .5em;
+  font-weight: 100;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-title:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: "";
+  
+  width: 55px;
+  height: 100%;
+  -webkit-transition: .4s .3s;
+  -moz-transition: .4s .3s;
+  transition: .4s .3s;
+}
+
+.dropdown-title:after {
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  right: 20px;
+  margin: auto;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.dropdown-list {
+  display: none;
+  list-style: none;
+  padding: .9em;
+  color: #fff;
+  font-weight: 120;
+  cursor: pointer;
+}
+
+.dropdown-list:hover { background: rgba(0, 0, 0, 0.2); }
+
+
+
+.dropdown-list:nth-child(odd):hover { background: rgba(0, 0, 0, 0.2); }
