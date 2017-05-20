@@ -1,22 +1,28 @@
-<?php
-{session_start();}
-?>
+
 <div class="container">
-	<div id="form-box">
-		<form class=" form-inline">
-			<div class="input-group">
-				<input type="text" class="form-control search-query" placeholder="Search..." style="
-				width: 500px;
-				" /> <span class="input-group-btn">
-					<button type="submit" class="btn btn-primary"> Search</button>
-				</span>
-			</div>
-		</form>
+	<div class="form-box">
+		<div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" name="search_text" id="search_text" class="form-control input-lg" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <br>
+            <div id="result"></div>
+        </div>
+        </div>
 	</div>
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1><strong>Welcome to UEL IT Services</strong></h1>
+				<h1 id="heading"><strong>Welcome to UEL IT Services</strong></h1>
 			</div>
 		</div>
 		<div class="row">
@@ -67,7 +73,7 @@
 				</ul>
 			</div>
 			<div class="col-sm-4">
-				<ul class="dropdown trigger5 tile blue">
+				<ul class="dropdown trigger5 tile ">
 					<h2 class="dropdown-title">Choose your option</h2>
 					<li class="dropdown-list list5">jQuery Plugins</li>
 					<li class="dropdown-list list5">Google.com</li>
@@ -79,9 +85,22 @@
 			
 		</div>
 	</div>
+	<div class="container">
+<div class="add-next-page">
+		<button type="button" class=" add-btn btn btn-success btn-xs">Add <span class="glyphicon glyphicon-plus"></span></button>
+	<ul class="pagination pagination pages">
+	    <li><a href="#">1</a></li>
+	    <li><a href="#">2</a></li>
+	    <li><a href="#">3</a></li>
+	    <li><a href="#">4</a></li>
+	    <li><a href="#">5</a></li>
+  </ul>
+  </div>
+  </div>
 </div>
 
 <script>
+$(document).ready(function(){
 var trigger = '.trigger';
 var trigger1 = '.trigger1';
 var trigger2 = '.trigger2';
@@ -143,4 +162,8 @@ toggleIt4();
 $(trigger5).on('click', function () {
 toggleIt5();
 });
+
+});
 </script>
+
+

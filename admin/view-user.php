@@ -2,10 +2,28 @@
 include "../includes/navbar-dash.inc.php";
 ?>
 <div id="wrapper">
-	<div id="page-wrapper">
-		<div class="container-fluid">
-			<h1>Users</h1>
-			<div class="container">
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <h1>Users</h1>
+            <div class="container">
+             <div class="col-md-6 col-md-offset-3">
+             <br><br><br>
+            <div id="custom-search-input">
+                <div class="input-group col-md-8">
+                    <input type="text" name="search_text" id="search_text" class="form-control input-lg" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <br>
+            <div id="result"></div>
+        </div>
+
+
+        <br><br>
     <div class="row col-md-10  custyle">
     <table class="table table-striped custab">
     <thead>
@@ -37,9 +55,9 @@ include "../includes/navbar-dash.inc.php";
 
 
                 echo '<td class="text-center">
-                <a class="btn btn-info btn-xs" href="#">
-                <span class="glyphicon glyphicon-edit"></span> Edit</a>
-                 <a href="#" class="btn btn-danger btn-xs">
+                <a class="btn-edit btn btn-info btn-xs" href="#">
+                <span class=" glyphicon glyphicon-edit "></span> Edit</a>
+                 <a href="#" class="btn-remove btn btn-danger btn-xs">
                  <span class="glyphicon glyphicon-remove"></span> Del</a></td>';
                 echo "</tr>";
             
@@ -51,6 +69,7 @@ include "../includes/navbar-dash.inc.php";
         <div class="col-md-8">
             <nav>
   <ul class="pagination">
+
     <li>
       <a href="#" aria-label="Previous">
         <span aria-hidden="true">«</span>
@@ -80,11 +99,13 @@ include "../includes/navbar-dash.inc.php";
     </div>
     </div>
 </div>
-		
-		</div>
-	</div>
+        
+        </div>
+    </div>
 </div>
 <!-- jQuery -->
 <script src="../js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="../js/bootstrap.min.js"></script>
+
+

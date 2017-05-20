@@ -1,4 +1,6 @@
-<nav class="navbar navbar-inverse" role="navigation">
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse " role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -12,14 +14,12 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
-            <ul class="nav navbar-nav">
+             <ul class="nav navbar-nav">
                     <?php
                         // Define each name associated with an URL
                         $urls = array(
                             'Home' => 'home.php',
-                            'Dash' => 'admin/dashboard.php',
+                            'Dashboard' => 'admin/dashboard.php',
                             'Services' => 'services.php',
                             'Interfaces' => 'interfaces.php', 
                             'Logout' => 'logout.php',
@@ -33,12 +33,12 @@
             </ul>
         
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</div>
 </nav>
+<!-- /.container -->
