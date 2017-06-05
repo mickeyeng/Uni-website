@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse " role="navigation">
     <div class="container">

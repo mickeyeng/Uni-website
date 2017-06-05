@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 if (!$row = $result->fetch_assoc()) {
 	echo "Your username or passowrd is incorrect";
 } else {
-	$_SESSION['id'] = $row['id'];
+	$_SESSION['id'] = $row['userid'];
 	header("Location: home.php");
 }
 

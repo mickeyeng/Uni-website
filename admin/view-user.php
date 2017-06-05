@@ -2,10 +2,10 @@
 include "../includes/navbar-dash.inc.php";
 ?>
 <div id="wrapper">
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <h1>Users</h1>
-            <div class="container">
+	<div id="page-wrapper">
+		<div class="container-fluid">
+			<h1>Users</h1>
+			<div class="container">
              <div class="col-md-6 col-md-offset-3">
              <br><br><br>
             <div id="custom-search-input">
@@ -46,7 +46,7 @@ include "../includes/navbar-dash.inc.php";
         // display all the rows from the table into the form
         while($row = mysqli_fetch_array($result)) {
             echo "<tr>";
-                echo "<td>".$row["ID"]."</td>";
+                echo "<td>".$row["id"]."</td>";
                 echo "<td>".$row["first"]."</td>";
                 echo "<td>".$row["last"]."</td>";
                 echo "<td>".$row["email"]."</td>";
@@ -99,9 +99,9 @@ include "../includes/navbar-dash.inc.php";
     </div>
     </div>
 </div>
-        
-        </div>
-    </div>
+		
+		</div>
+	</div>
 </div>
 <!-- jQuery -->
 <script src="../js/jquery.js"></script>

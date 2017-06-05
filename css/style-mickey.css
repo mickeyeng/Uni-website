@@ -1,6 +1,6 @@
 .wrapper {
-  min-height: 100%;
-  position: relative;
+	min-height: 100%;
+	position: relative;
 }
 
 .footer {
@@ -27,13 +27,13 @@ margin: 20px 0 10px;
 
 
 .navbar-inverse {
-  background-color: #363636;
+	background-color: #363636;
 }
 
 
 .form-box {
-  text-align: center;
-  padding-top: 60px;
+	text-align: center;
+	padding-top: 60px;
     padding-bottom: 40px;
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'UEL');
+$conn = mysqli_connect('localhost', 'root', '', 'uel');
 
 
 if (!$conn) {
