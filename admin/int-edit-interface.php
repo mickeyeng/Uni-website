@@ -1,8 +1,6 @@
 <?php include "../includes/header.php";
 include "../includes/navbar-dash.inc.php";
 ?>
-
-
 <div id="wrapper">
 	<div id="page-wrapper">
 		<div class="container-fluid">

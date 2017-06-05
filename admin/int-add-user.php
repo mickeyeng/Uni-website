@@ -24,11 +24,10 @@ include "../includes/navbar-dash.inc.php";
 						<label for="Name">Last name</label>
 						<input type="text" name="last" class="form-control" id="Name" placeholder="Last Name">
 					</div>
-						<div class="form-group">
-							<label for="email" class="control-label">Email Address</label>
-								<input type="email" class="form-control" id="email" name="email"
-								placeholder="email@email.com" value="">
-						</div>
+					<div class="form-group">
+						<label for="Name">Email</label>
+						<input type="text" name="email" class="form-control" id="Name" placeholder=" Email">
+					</div>
 					<div class="form-group">
 						<label for="Name">Username</label>
 						<input type="text" name="userid"  class="form-control" id="Name" placeholder="Username">

@@ -1,8 +1,11 @@
 
-<div class="container">
-	<div class="form-box">
-		<div class="row">
-        <div class="col-md-6 col-md-offset-3">
+	<div class="container">
+     <div class="col-md-12">
+                <h1 id="heading"><strong>Welcome to UEL IT Services</strong></h1>
+            </div>
+    <div class="form-box">
+        <div class="row">
+        <div class="col-md-12">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
                     <input type="text" name="search_text" id="search_text" class="form-control input-lg" placeholder="Search" />
@@ -17,87 +20,119 @@
             <div id="result"></div>
         </div>
         </div>
-	</div>
-	
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1 id="heading"><strong>Welcome to UEL IT Services</strong></h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4">
-				<ul class="dropdown trigger tile purple">
-					<h2 class="dropdown-title">Choose your option</h2>
-			
-					<li class="dropdown-list list">jQuery Plugins</li>
-					<li class="dropdown-list list">Google.com</li>
-					<li class="dropdown-list list">Youtube.com</li>
-					<li class="dropdown-list list"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
-				</ul>
-			</div>
-			<div class="col-sm-4">
-				<ul class="dropdown trigger1 tile red">
-					<h2 class="dropdown-title">Choose your option</h2>
-					<li class="dropdown-list list1">jQuery Plugins</li>
-					<li class="dropdown-list list1">Google.com</li>
-					<li class="dropdown-list list1">Youtube.com</li>
-					<li class="dropdown-list list1"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
-				</ul>
-			</div>
-			<div class="col-sm-4">
-				<ul class="dropdown trigger2 tile orange">
-					<h2 class="dropdown-title">Choose your option</h2>
-					<li class="dropdown-list list2">jQuery Plugins</li>
-					<li class="dropdown-list list2">Google.com</li>
-					<li class="dropdown-list list2">Youtube.com</li>
-					<li class="dropdown-list list2"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
-				</ul>
-			</div>
-			<div class="col-sm-4">
-				<ul class="dropdown trigger3 tile green">
-					<h2 class="dropdown-title">Choose your option</h2>
-					<li class="dropdown-list list3">jQuery Plugins</li>
-					<li class="dropdown-list list3">Google.com</li>
-					<li class="dropdown-list list3">Youtube.com</li>
-					<li class="dropdown-list list3"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
-				</ul>
-			</div>
-			<div class="col-sm-4">
-				<ul class="dropdown trigger4 tile blue">
-					<h2 class="dropdown-title">Choose your option</h2>
-					<li class="dropdown-list list4">jQuery Plugins</li>
-					<li class="dropdown-list list4">Google.com</li>
-					<li class="dropdown-list list4">Youtube.com</li>
-					<li class="dropdown-list list4"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
-				</ul>
-			</div>
-			<div class="col-sm-4">
-				<ul class="dropdown trigger5 tile ">
-					<h2 class="dropdown-title">Choose your option</h2>
-					<li class="dropdown-list list5">jQuery Plugins</li>
-					<li class="dropdown-list list5">Google.com</li>
-					<li class="dropdown-list list5">Youtube.com</li>
-					<li class="dropdown-list list5"><a href="http://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a>.com</li>
-				</ul>
-			</div>
+    </div>
+	<div class="row">
+            <?php
 
-			
-		</div>
+            include "./db_handler.php";
+
+            $per_page = 10;
+            if (isset($_GET["page"])) {
+
+                $page = $_GET["page"];
+            } else {
+                $page = 1;
+            }
+            $start_from = ($page - 1) * $per_page;
+
+            $results = $conn->query("SELECT * FROM services LIMIT $start_from, $per_page");
+
+            /***
+             * Run through the interface_service_link table and get the keys [interface_id] + [service_id]
+             * Once that's done then translate these into readable names.
+             */
+
+            $data = array();
+            while ($row = $results->fetch_assoc()) {
+                $interface_name = $row['Heading'];
+                $service_name = $row['service_name'];
+                $data[$interface_name][] = $service_name;  // group them
+            }
+
+            /** Fetch The colours */
+            $result2 = $conn->query("SELECT Colour, Heading FROM services");
+
+            /**
+             * Loops through the array then retrieves the interface name and the colour from their respective columns
+             * These are then used as a key and a value
+             * Example $colour_data['Interface Name'] will retrieve a colour for the tiles.
+             */
+            $colour_data = array();
+            while ($row = $result2->fetch_assoc()) {
+                $colour_data[$row['Heading']] = $row['Colour'];
+            }
+
+            $counter = 1;
+
+            foreach ($data as $interface_name => $values) {
+                echo ' <div class="col-sm-4">
+                        <ul class="dropdown trigger' . $counter . ' tile ' . $colour_data[$interface_name] . '">
+                         <h2 class="dropdown-title">' . $interface_name . '</h2>';
+
+                // Drop down
+                foreach ($values as $service_name) {
+                    echo '          <li class="dropdown-list list' . $counter . '">' . $service_name . '</li>';
+                }
+
+                echo '    </ul>
+                                </div>   ';
+                $counter++;
+            }
+
+            ?>
+
+
+        </div>
+
 	</div>
 	<div class="container">
 <div class="add-next-page">
 		<button type="button" class=" add-btn btn btn-success btn-xs">Add <span class="glyphicon glyphicon-plus"></span></button>
-	<ul class="pagination pagination pages">
-	    <li><a href="#">1</a></li>
-	    <li><a href="#">2</a></li>
-	    <li><a href="#">3</a></li>
-	    <li><a href="#">4</a></li>
-	    <li><a href="#">5</a></li>
-  </ul>
+	<ul class="pagination pages">
+            <li>
+
+         <!--        <?php
+                //Now select all from table
+                $query = "select * from services";
+                $result = mysqli_query($conn, $query);
+
+                // Count the total records
+                $total_records = mysqli_num_rows($result);
+
+                //Using ceil function to divide the total records on per page
+                $total_pages = ceil($total_records / $per_page);
+
+                //Going to first page
+                echo "<a href='home.php?page=1'
+                                 aria-label='Previous'>
+                            <span aria-hidden='true'>«</span> </a>
+                    </li>
+                    ";
+
+
+                //Generating the pages
+                for ($i = 1; $i <= $total_pages; $i++) {
+                    echo "
+                    <li><a href='home.php?page=" . $i . "'>" . $i . "</a></li>
+                    ";
+                };
+
+                // Going to last page
+                echo "
+                    <li>
+                        <a href='home.php?page=$total_pages' aria-label='Next'> <span aria-hidden='true'>»</span>
+                        </a>
+        
+                    </li>
+                    ";
+                ?> -->
+
+        </ul>
   </div>
   </div>
 </div>
+
+
 
 <script>
 $(document).ready(function(){
@@ -165,5 +200,85 @@ toggleIt5();
 
 });
 </script>
+<!-- 
+<script>
+$(document).ready(function(){
+//load_data();
+function load_data(query)
+{
+$.ajax({
+url:"./search-services.php",
+method:"POST",
+data:{query:query},
+success:function(data)
+{
+$('#result').html(data);
+}
+});
+}
+$('#search_text').keyup(function(){
+var search = $(this).val();
+if(search != '')
+{
+load_data(search);
+} else {
+	$('#result').html('');
+}
+});
+});
+</script> -->
 
+<!-- <script>
 
+$(document).ready(function() {
+	$('#search_text').keyup(function(){
+		var txt = $(this).val();
+		if (txt != '') {
+			$.ajax({
+			url:"./search-services.php",
+			method:"POST",
+			data:{search:txt},
+			success:function(data)
+			{
+			$('#result').html(data);
+			}
+			});
+		} else {
+			$('#result').html('');
+		}
+	});
+});
+</script>
+ -->
+<!-- 
+ <script type="text/javascript">
+ $(document).ready(function() {
+    $('#search_text').bootcomplete({
+        url:'./search-services2.php'
+    });
+});
+</script> -->
+
+<script>
+$(document).ready(function(){
+ 
+ $('#search_text').typeahead({
+  source: function(query, result)
+  {
+   $.ajax({
+    url:"./search-services2.php",
+    method:"POST",
+    data:{query:query},
+    dataType:"json",
+    success:function(data)
+    {
+     result($.map(data, function(item){
+      return item;
+     }));
+    }
+   })
+  }
+ });
+ 
+});
+</script>

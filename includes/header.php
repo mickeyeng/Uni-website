@@ -1,4 +1,4 @@
-<?//php session_start(); ?> 
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,18 +11,11 @@
 		<link rel="stylesheet" href="../css/style-mickey.css?<?php echo time(); ?> /">
 		<link rel="stylesheet" href="../css/tile.css?<?php echo time(); ?> /">
 		<link rel="stylesheet" href="../css/sb-admin.css?<?php echo time(); ?> /">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+		<link rel="stylesheet" href="../css/bootcomplete.css?<?php echo time(); ?> /">
 
 
-
-
-
-
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-		<script src="../js/modernizr.custom.63321.js"></script>
-
+		<script src="../js/bootstrap.min.js"></script>
 
 		<title>Home</title>
 	</head>

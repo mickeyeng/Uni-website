@@ -1,6 +1,6 @@
 .wrapper {
-	min-height: 100%;
-	position: relative;
+  min-height: 100%;
+  position: relative;
 }
 
 .footer {
@@ -10,6 +10,30 @@ width: 100%;
 background: #363636;
 margin-bottom: -50px;
 
+}
+
+
+nav  {
+    height: 90px;
+}
+
+/* .nav-links {
+  margin-left: 10%;
+} */
+
+.nav .navbar-nav {
+ /*  font-size: 10px; */
+  color: #ececec;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ececec;
+}
+
+.main-nav {
+  margin-top: 15px;
+  text-transform: uppercase;
 }
 
 html, body {
@@ -27,14 +51,18 @@ margin: 20px 0 10px;
 
 
 .navbar-inverse {
-	background-color: #363636;
+  background-color: #363636;
 }
 
 
 .form-box {
-	text-align: center;
-	padding-top: 60px;
+  text-align: center;
+  padding-top: 60px;
     padding-bottom: 40px;
+}
+
+.dropdown-menu {
+  width: 100%;
 }
 
  .navbar {
@@ -72,6 +100,12 @@ margin: 20px 0 10px;
 
 .btn-info {
   background-color: #00bdaa;
+      padding: 10px 16px;
+}
+
+.btn-info2 {
+  background-color: #00bdaa;
+      padding: 13px 16px;
 }
 
 .btn-edit {
@@ -82,7 +116,9 @@ margin: 20px 0 10px;
   padding: 10px;
 }
 
-
+.side-nav {
+  top: 8200px;
+}
 
 
 .navbar-brand {
@@ -179,3 +215,105 @@ margin: 20px 0 10px;
 
 
 .dropdown-list:nth-child(odd):hover { background: rgba(0, 0, 0, 0.2); }
+
+
+
+
+#suggestion-box {
+  color: #000;
+  display: none;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 0;
+  margin: 0 10px 0 0; }
+  #suggestion-box #no-suggestions {
+    padding: 10px; }
+  #suggestion-box ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    clear: both; }
+    #suggestion-box ul > li {
+      padding: 0;
+      margin: 0; }
+      #suggestion-box ul > li a {
+        display: block;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
+        padding: 10px; }
+  #suggestion-box .selected {
+    background-color: #eee; }
+  #suggestion-box #suggestion-header {
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #999;
+    float: right; }
+
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+  
+.navbar-right {
+  margin-right: -80px;
+}
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+.navbar-right {
+  margin-right: -80px;
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) { }
+
+@media all and (max-width: 480px) { }
+
+
+/* Portrait */
+@media screen and (orientation:portrait) { /* Portrait styles here */ }
+/* Landscape */
+@media screen and (orientation:landscape) { /* Landscape styles here */ }
+
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+} 
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
