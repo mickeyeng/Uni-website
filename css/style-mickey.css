@@ -126,8 +126,8 @@ margin: 20px 0 10px;
 }
 
 #heading {
-  font: normal 400 2.8em/2.5em Arial,"Times New Roman", serif;
-  font-weight: 700px;
+  font: style="font-family: 'Roboto', sans-serif;"
+  font-weight: 0px;
 }
 
 .navbar-brand>img {

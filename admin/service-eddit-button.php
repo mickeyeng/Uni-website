@@ -8,29 +8,38 @@ include "../includes/navbar-dash.inc.php";
             <hr>
 
          
-            <div class="form1">
-                <form  class="form-horizontal" role="form" method="post">
-                    <div class="form-group">
-                        <label for="service_name" class="col-sm-2 control-label">Field name</label>
-                        <div class="col-sm-10">
-                            <input name="fields[]" type="text" class="form-control" id="name"
-                                   placeholder="Please enter a field name" value="">
-                        </div>
-                    </div>
+            
               
                     
-                    <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-2">
-                            <input id="submit" name="submit" type="button" value="Add field" class="btn-add btn btn-primary">
-                     
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-2">
-                            <!--                             Will be used to display an alert to the user-->
-                        </div>
+            <div class="container">
+    <div class="row">
+        <div class="control-group" id="fields"> 
+        <br>
+        <label class="control-label" for="field1" for="service_type" class="col-sm-2 control-label">Service Heading</label>
+    
+
+
+
+
+
+            
+            <div class="controls"> 
+                <form class="form-horizontal" method="post" role="form" autocomplete="off">
+                    <div class="entry input-group col-xs-3">
+                        <input class="form-control" name="fields[]" type="text" placeholder="Field name" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
                     </div>
                 </form>
+            <br>
+            <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>
+            </div>
+        </div>
+    </div>
+</div>
 
 
             </div>
@@ -48,7 +57,7 @@ $(function()
     {
         e.preventDefault();
 
-        var controlForm = $('.form1 form:first'),
+        var controlForm = $('.controls form:first'),
             currentEntry = $(this).parents('.entry:first'),
             newEntry = $(currentEntry.clone()).appendTo(controlForm);
 
@@ -59,11 +68,11 @@ $(function()
             .html('<span class="glyphicon glyphicon-minus"></span>');
     }).on('click', '.btn-remove', function(e)
     {
-		$(this).parents('.entry:first').remove();
+        $(this).parents('.entry:first').remove();
 
-		e.preventDefault();
-		return false;
-	});
+        e.preventDefault();
+        return false;
+    });
 });
 
 </script>
