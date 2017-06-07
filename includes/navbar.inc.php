@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img class="" src="./img/uel2.png"></a>
+            <a class="navbar-brand" href="#"><img class="" src="./img/uel.png"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -56,5 +56,6 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
+    <hr id="hr_main">
     <!-- /.container -->
 </nav>

@@ -4,7 +4,10 @@ include "../includes/navbar-dash.inc.php";
 <div id="wrapper">
     <div id="page-wrapper">
         <div class="container-fluid">
-            <h1>Users</h1>
+            <br>
+            <br>
+            <h1  id="heading"><strong>View users</strong></h1>
+            <hr id="hr_main">
             <div class="container">
                 <div class="col-md-6 col-md-offset-3">
                     <br><br><br>

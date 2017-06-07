@@ -4,8 +4,10 @@ include "../includes/navbar-dash.inc.php";
 <div id="wrapper">
 	<div id="page-wrapper">
 		<div class="container-fluid">
-			<h1>View Services</h1>
-			<hr>
+			<br>
+            <br>
+            <h1  id="heading"><strong>View Services</strong></h1>
+            <hr id="hr_main">
 		</div>
 	</div>
 </div>

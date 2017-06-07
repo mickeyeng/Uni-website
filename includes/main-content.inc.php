@@ -1,8 +1,9 @@
 
 	<div class="container">
      <div class="col-md-12">
-                <h1 id="heading"><strong>Welcome to UEL IT Services</strong></h1>
+                <h1  id="heading"><strong>Welcome to UEL IT Services</strong></h1>
             </div>
+            <br>
     <div class="form-box">
         <div class="row">
         <div class="col-md-12">
@@ -21,6 +22,7 @@
         </div>
         </div>
     </div>
+   <!--  <hr id="hr_main"> -->
 	<div class="row">
             <?php
 
@@ -66,7 +68,7 @@
 
             foreach ($data as $interface_name => $values) {
                 echo ' <div class="col-sm-4">
-                        <ul class="dropdown trigger' . $counter . ' tile ' . $colour_data[$interface_name] . '">
+                        <ul id="heading" class="dropdown trigger' . $counter . ' tile ' . $colour_data[$interface_name] . '">
                          <h2 class="dropdown-title">' . $interface_name . '</h2>';
 
                 // Drop down
@@ -83,7 +85,10 @@
 
 
         </div>
+            
+            <!-- <hr id="hr_main"> -->
 
+        
 	</div>
 	<div class="container">
 <div class="add-next-page">
@@ -131,6 +136,7 @@
   </div>
   </div>
 </div>
+
 
 
 
@@ -200,64 +206,7 @@ toggleIt5();
 
 });
 </script>
-<!-- 
-<script>
-$(document).ready(function(){
-//load_data();
-function load_data(query)
-{
-$.ajax({
-url:"./search-services.php",
-method:"POST",
-data:{query:query},
-success:function(data)
-{
-$('#result').html(data);
-}
-});
-}
-$('#search_text').keyup(function(){
-var search = $(this).val();
-if(search != '')
-{
-load_data(search);
-} else {
-	$('#result').html('');
-}
-});
-});
-</script> -->
 
-<!-- <script>
-
-$(document).ready(function() {
-	$('#search_text').keyup(function(){
-		var txt = $(this).val();
-		if (txt != '') {
-			$.ajax({
-			url:"./search-services.php",
-			method:"POST",
-			data:{search:txt},
-			success:function(data)
-			{
-			$('#result').html(data);
-			}
-			});
-		} else {
-			$('#result').html('');
-		}
-	});
-});
-</script>
- -->
-<!-- 
- <script type="text/javascript">
- $(document).ready(function() {
-    $('#search_text').bootcomplete({
-        url:'./search-services2.php'
-    });
-});
-</script> -->
 
 <script>
 $(document).ready(function(){

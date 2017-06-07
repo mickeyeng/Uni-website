@@ -4,8 +4,10 @@ include "../includes/navbar-dash.inc.php";
 <div id="wrapper">
 	<div id="page-wrapper">
 		<div class="container-fluid">
-			<h1>Delete</h1>
-			<hr>
+			<br>
+            <br>
+            <h1  id="heading"><strong>Delete interface</strong></h1>
+            <hr id="hr_main">
 		</div>
 	</div>
 </div>

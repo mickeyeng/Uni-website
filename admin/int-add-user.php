@@ -12,8 +12,10 @@ include "../includes/navbar-dash.inc.php";
 <div id="wrapper">
 	<div id="page-wrapper">
 		<div class="container-fluid">
-			<h1>Add new users</h1>
-			<hr>
+			<br>
+            <br>
+            <h1  id="heading"><strong>Add new user</strong></h1>
+            <hr id="hr_main">
 			<div class="container">
 				<form action="../register.php" method="POST" class="register-form">
 					<div class="form-group">

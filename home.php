@@ -23,7 +23,8 @@
 		<br>
 		<div class="wrapper">
 		<?php include "includes/main-content.inc.php"; ?>
+		<?php include "includes/footer.inc.php";?>
+		</div>
 	</body>
-	<?php include "includes/footer.inc.php";?>
-	</div>
+
 </html>
