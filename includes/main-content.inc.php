@@ -92,7 +92,9 @@
 	</div>
 	<div class="container">
 <div class="add-next-page">
-		<button type="button" class=" add-btn btn btn-success btn-xs">Add <span class="glyphicon glyphicon-plus"></span></button>
+		<a href="admin/serv-add.php" class="add-btn btn btn-2">Add +</a> 
+        <br>
+        <br>
 	<ul class="pagination pages">
             <li>
 

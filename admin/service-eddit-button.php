@@ -10,43 +10,52 @@ include "../includes/navbar-dash.inc.php";
             <hr id="hr_main">
 
          
+            <div class="container">  
+                <br />  
+                <br />  
+                <div class="form-group">  
+                     <form name="add_name" id="add_name">  
+                          <div class="table-responsive">  
+                               <table class="table table-bordered" id="dynamic_field">  
+                                    <tr>  
+                                         <td><input type="text" name="name[]" placeholder="Enter field name" class="form-control name_list" /></td>  
+                                         <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
+                                    </tr>  
+                               </table>  
+                               <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />  
+                          </div>  
+                     </form>  
+                </div>  
+           </div>
+
             
+           <script>
+            $(document).ready(function(){  
+              var i=1;  
+              $('#add').click(function(){  
+                   i++;  
+                   $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+              });  
+              $(document).on('click', '.btn_remove', function(){  
+                   var button_id = $(this).attr("id");   
+                   $('#row'+button_id+'').remove();  
+              });  
+              $('#submit').click(function(){            
+                   $.ajax({  
+                        url:"../addField.php",  
+                        method:"POST",  
+                        data:$('#add_name').serialize(),  
+                        success:function(data)  
+                        {  
+                             /*alert(data);  */
+                             $('#add_name')[0].reset();  
+                        }  
+                   });  
+              });  
+                });  
+             </script>
+   
               
-                    
-            <div class="container">
-    <div class="row">
-        <div class="control-group" id="fields"> 
-        <br>
-        <label class="control-label" for="field1" for="service_type" class="col-sm-2 control-label">Service Heading</label>
-    
-
-
-
-
-
-            
-            <div class="controls"> 
-                <form class="form-horizontal" method="post" role="form" autocomplete="off">
-                    <div class="entry input-group col-xs-3">
-                        <input class="form-control" name="fields[]" type="text" placeholder="Field name" />
-                        <span class="input-group-btn">
-                            <button class="btn btn-success btn-add" type="button">
-                                <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-            <br>
-            <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-            </div>
-        </div>
-    </div>
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

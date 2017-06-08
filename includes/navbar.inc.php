@@ -56,6 +56,6 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <hr id="hr_main">
+    <!-- <hr id="hr_main"> -->
     <!-- /.container -->
 </nav>

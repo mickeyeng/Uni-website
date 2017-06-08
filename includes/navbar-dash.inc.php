@@ -107,6 +107,6 @@
                     </li>
                 </ul>
             </div>
-            <hr id="hr_main">
+            <!-- <hr id="hr_main"> -->
             <!-- /.navbar-collapse -->
         </nav>

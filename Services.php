@@ -7,26 +7,30 @@
     <link rel="stylesheet" href="css/style.css?<?php echo time(); ?> /">
     <link rel="stylesheet" href="css/style-mickey.css?<?php echo time(); ?> /">
     <link rel="stylesheet" href="css/tile.css?<?php echo time(); ?> /">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
 
     <title>Home</title>
   </head>
   <?php include "includes/navbar.inc.php";?>
+  <br>
+  <br>
 
 
-	<ul class="pager">
-  		<button onclick="goBack()" class="button">Go Back</button>
-			<script>
-			function goBack() {
-			    window.history.back();
-			}
-			</script>
-  	</ul>
+
   
   <div class="container">
+  <ul class="pager">
+      <button onclick="goBack()" class="button"><span>Go Back</span></button>
+      <script>
+      function goBack() {
+          window.history.back();
+      }
+      </script>
+    </ul>
             <div class="col-md-12">
-                <h1 id="heading"><strong>Welcome to UEL IT Services</strong></h1>
+                <h1  id="heading"><strong>Services</strong></h1>
             </div>
     <div class="form-box">
         <div class="row">
@@ -126,7 +130,38 @@
     			<span class="sr-only">Next</span>
   			</a>
 		</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 	</div>
    <?php include "includes/footer.inc.php";?>
 </body>
 </html>
+
+<!-- script for seach  -->
+<script>
+$(document).ready(function(){
+ 
+ $('#search_text').typeahead({
+  source: function(query, result)
+  {
+   $.ajax({
+    url:"./search-services2.php",
+    method:"POST",
+    data:{query:query},
+    dataType:"json",
+    success:function(data)
+    {
+     result($.map(data, function(item){
+      return item;
+     }));
+    }
+   })
+  }
+ });
+ 
+});
+</script>
