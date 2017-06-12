@@ -21,14 +21,13 @@
 
   
   <div class="container">
-  <ul class="pager">
       <button onclick="goBack()" class="button"><span>Go Back</span></button>
+      <button id="show" class="col-md-offset-1 button click"><span>View</span></button>
       <script>
       function goBack() {
           window.history.back();
       }
       </script>
-    </ul>
             <div class="col-md-12">
                 <h1  id="heading"><strong>Services</strong></h1>
             </div>
@@ -50,7 +49,27 @@
         </div>
         </div>
     </div>
+    <section id="content">
 	  <div class="row">
+
+    <div class="container" style="width:900px;">
+    <br /><br />
+      <div id="treeview"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	    <?php
 
 			$conn = mysqli_connect('localhost', 'root', '', 'uel');
@@ -120,6 +139,7 @@
            		}
            </style>
 	  </div>
+    </section>
     	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 	    	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
     			<span class="glyphicon glyphicon-chevron-left" style="color: black;"></span>
@@ -141,7 +161,45 @@
 </body>
 </html>
 
-<!-- script for seach  -->
+
+<!-- script for list view -->
+<!-- <script>
+$(document).ready(function(){
+ $.ajax({ 
+   url: "fetch.php",
+   method:"POST",
+   dataType: "json",       
+   success: function(data)  
+   {
+  $('#treeview').treeview({data: data});
+   }   
+ });
+ 
+});
+</script> -->
+
+
+
+<script>
+  // var element = document.getElementById('content');
+  // element.style.visibility = 'hidden';
+
+  $("button").click(function() {
+    $("#newpost").toggle();
+});
+
+
+
+$('#show').click(function() {
+  $('#content').slideToggle();
+});
+
+
+</script>
+
+
+
+<!-- script for search  -->
 <script>
 $(document).ready(function(){
  
