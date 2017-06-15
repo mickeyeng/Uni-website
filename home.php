@@ -11,8 +11,13 @@
 		<link rel="stylesheet" href="css/style.css?<?php echo time(); ?> /">
 		<link rel="stylesheet" href="css/style-mickey.css?<?php echo time(); ?> /">
 		<link rel="stylesheet" href="css/tile.css?<?php echo time(); ?> /">
+		 <link rel="stylesheet" href="css/animsition.min.css?<?php echo time(); ?> /">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+		<script src="js/animsition.min.js"></script>  
+
+		
 
 		<title>Home</title>
 	</head>
@@ -26,5 +31,6 @@
 		<?php include "includes/footer.inc.php";?>
 		</div>
 	</body>
+
 
 </html>

@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="css/style.css?<?php echo time(); ?> /">
     <link rel="stylesheet" href="css/style-mickey.css?<?php echo time(); ?> /">
     <link rel="stylesheet" href="css/tile.css?<?php echo time(); ?> /">
+     <link rel="stylesheet" href="css/bootstrap-treeview.css?<?php echo time(); ?> /">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
+    <script src="js/bootstrap-treeview.js"></script> 
 
     <title>Home</title>
   </head>
@@ -22,7 +25,8 @@
   
   <div class="container">
       <button onclick="goBack()" class="button"><span>Go Back</span></button>
-      <button id="show" class="col-md-offset-1 button click"><span>View</span></button>
+      <button id="show" class="col-md-offset-1 button click"><span>List View</span></button>
+       <button id="show1" style="display: none;" class="col-md-offset-1 button click"><span>Tile View</span></button>
       <script>
       function goBack() {
           window.history.back();
@@ -49,26 +53,98 @@
         </div>
         </div>
     </div>
-    <section id="content">
 	  <div class="row">
-
+    
+    <section id="tree" style="display:none;>
     <div class="container" style="width:900px;">
-    <br /><br />
-      <div id="treeview"></div>
-    </div>
+   <h1 align="center"  id="heading"><strong>List view for Services</strong></h1>
+   <!-- <hr id="hr_main"> -->
+   <?php
+   include "db_handler.php";
+
+    $sql = "SELECT service_name, Heading FROM SERVICES";
+    $result = mysqli_query($conn, $sql);
+
+
+    $row = mysqli_fetch_array($result);
+
+       while($row = $result->fetch_assoc()) {
+            // echo "Service Name: {$row['service_name']}  <br> ".
+            // "--------------------------------<br>";
+
+
+            // echo "<div class='panel panel-default'>
+            // <div class='panel-heading'>
+            //   <h3 class='panel-title'>{$row['service_name']}</h3>
+            // </div>
+            //   <div class='panel-body'>
+            //     <a href='./home.php'{$row['service_name']}</a>
+            //   </div>
+            // </div>";
+
+            echo "<div class='list-group'>
+          <div class='list-group-item'>
+            <h4 style='font-weight: 500;' class='list-group-item-heading'>{$row['Heading']}</h4>
+            <hr style='color: #00bdaa;'>
+            <a href=''class='list-group-item-text'>{$row['service_name']}</a>
+          </div>
+        </div>";
 
 
 
 
 
+        }
+
+   ?>
+  </div>
+  </section>
 
 
+<!--   echo "<div class='list-group'>
+  <a href='' class='list-group-item active'>
+    <h4 class='list-group-item-heading'>{$row['Heading']}</h4>
+    <p class='list-group-item-text'>{$row['service_name']}</p>
+  </a>
+</div>"; -->
+
+  <!-- <div class="panel panel-default">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+ -->
+
+<!-- 
+            echo "<div class='list-group'>
+              <a href='' class='list-group-item'>
+              {$row['service_name']}
+              </a>
+            </div>"; -->
 
 
+<!--   <div class="list-group">
+  <a href="#" class="list-group-item active">
+    Cras justo odio
+  </a>
+  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item">Vestibulum at eros</a>
+</div>
+ -->
 
-
-
-
+ <section id="content">
 
 	    <?php
 
@@ -162,21 +238,7 @@
 </html>
 
 
-<!-- script for list view -->
-<!-- <script>
-$(document).ready(function(){
- $.ajax({ 
-   url: "fetch.php",
-   method:"POST",
-   dataType: "json",       
-   success: function(data)  
-   {
-  $('#treeview').treeview({data: data});
-   }   
- });
- 
-});
-</script> -->
+
 
 
 
@@ -184,15 +246,41 @@ $(document).ready(function(){
   // var element = document.getElementById('content');
   // element.style.visibility = 'hidden';
 
-  $("button").click(function() {
-    $("#newpost").toggle();
-});
+
+
+
+// $('#show').click(function() {
+//   $('#tree').slideToggle();
+// });
+
+
+
 
 
 
 $('#show').click(function() {
+  $('#tree').slideToggle();
+  $('#show').hide();
+  $('#content').hide();
+  $('#myCarousel').hide();
+  $('#show1').show();
+
+
+});
+
+$('#show1').click(function() {
+  $('#tree').hide();
   $('#content').slideToggle();
 });
+
+
+
+
+
+
+
+
+
 
 
 </script>
