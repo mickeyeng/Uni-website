@@ -14,6 +14,7 @@
 		 <link rel="stylesheet" href="css/animsition.min.css?<?php echo time(); ?> /">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
 		<script src="js/animsition.min.js"></script>  
 
@@ -22,7 +23,7 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<?php include "includes/navbar.inc.php" ?>
+		<?php include "includes/navbar.inc.php";?>
 		<br>
 		<br>
 		<br>

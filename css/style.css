@@ -61,7 +61,6 @@
 .container {
   position: relative;
   z-index: 1;
-  max-width: px;
   margin: 0 auto;
 
 }

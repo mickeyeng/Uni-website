@@ -20,9 +20,8 @@ margin-bottom: -50px;
     border-top: 5px solid #00bdaa;
 }
 
-nav  {
-    height: 90px;
-}
+
+
 
 /* .nav-links {
   margin-left: 10%;
@@ -38,8 +37,13 @@ nav  {
     color: #ececec;
 }
 
+.navbar-collapse {
+  background-color: #363636;
+}
+
+
 .main-nav {
-  margin-top: 15px;
+  padding: 15px;
   text-transform: uppercase;
 }
 
@@ -93,7 +97,8 @@ margin: 20px 0 10px;
     font-size: 28px;
     color: #FFFFFF;
     padding: 20px;
-    width: 200px;
+    width: 48%;
+    margin: 0 1%;
     text-align: center;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -171,6 +176,10 @@ margin: 20px 0 10px;
   right: -20px;
   transition: 0.5s;
 }
+
+
+
+
 
 .button:hover span {
   padding-right: 25px;
@@ -336,6 +345,11 @@ margin: 20px 0 10px;
   border-left: 8px solid transparent;
 }
 
+/*a[aria-expanded="true"]{
+  padding-top: 100px;
+}
+*/
+
 .dropdown-list {
   display: none;
   list-style: none;
@@ -451,11 +465,15 @@ iPad 3
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
 /* Styles */
+.line-break {
+  display: none;
+}
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
 /* Styles */
+ 
 }
 
 /* iPhone 4 ----------- */
@@ -490,6 +508,10 @@ iPad 3
     .uel {
     padding: 25px;
   } 
+
+   .line-break {
+  display: block;
+}
 }
 
 /* iPhone 6 ----------- */
@@ -501,6 +523,10 @@ iPad 3
     .uel {
     padding: 25px;
   } 
+
+  #line-break {
+  display: block !important;
+}
 
 }
 
@@ -564,16 +590,30 @@ iPad 3
    480-less    - phone landscape & smaller
 --------------------------------------------*/
 @media all and (min-width: 1024px) and (max-width: 1280px) { 
-  
-.navbar-right {
-  margin-right: -80px;
+
+.line-break {
+  display: none;
 }
+
 
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) { 
-.navbar-right {
-  margin-right: -80px;
+@media all and (min-width: 320px) {}
+@media all and (min-width: 768px) {}
+@media all and (min-width: 1024px) {}
+@media all and (min-width: 1366px) {}
+
+
+
+@media all and (min-width: 768px) { 
+
+.button {
+  max-width: 200px;
+}
+
+.line-break {
+  display: none;
 }
 }
+
 

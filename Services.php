@@ -10,23 +10,28 @@
      <link rel="stylesheet" href="css/bootstrap-treeview.css?<?php echo time(); ?> /">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
     <script src="js/bootstrap-treeview.js"></script> 
 
     <title>Home</title>
   </head>
+  <body>
   <?php include "includes/navbar.inc.php";?>
   <br>
   <br>
 
 
 
-  
+  <div id="main-content">
   <div class="container">
+      
+      <div class="col-md-12 clearfix">
       <button onclick="goBack()" class="button"><span>Go Back</span></button>
       <button id="show" class="col-md-offset-1 button click"><span>List View</span></button>
-       <button id="show1" style="display: none;" class="col-md-offset-1 button click"><span>Tile View</span></button>
+       <button id="show1" style="display: none;" class="col-md-offset-1 button click">
+       <span>Tile View</span></button>
+       </div>
       <script>
       function goBack() {
           window.history.back();
@@ -66,7 +71,7 @@
     $result = mysqli_query($conn, $sql);
 
 
-    $row = mysqli_fetch_array($result);
+   
 
        while($row = $result->fetch_assoc()) {
             // echo "Service Name: {$row['service_name']}  <br> ".
@@ -234,6 +239,7 @@
     <br>
 	</div>
    <?php include "includes/footer.inc.php";?>
+   </div>
 </body>
 </html>
 
@@ -264,23 +270,60 @@ $('#show').click(function() {
   $('#content').hide();
   $('#myCarousel').hide();
   $('#show1').show();
-
-
 });
 
 $('#show1').click(function() {
   $('#tree').hide();
   $('#content').slideToggle();
+   $('#show').show();
+   $('#show1').hide();
+   $('#myCarousel').show();
+
 });
 
 
 
+// add padding to main content once nabvar is toggled 
+//  $('#toggle1').click(function() {
+//      $('#main-content').css('padding-top', '300px');
+
+// });
+
+//   $('#toggle1').click(function() {
+//      // $('#main-content').css('padding-top', '0px');
+
+// });
+
+// $(document).ready(function() {
+//    $("button.navbar-toggle").click(function () {
+//     if ($(".navbar-collapse").is(':visible')) {
+//       $('#main-content').css('padding-top', '300px');
+//     } else  {
+//       $('#main-content').css('padding-top', '-300px');
+//     }
+//   });
+// });
 
 
 
 
 
 
+// $("#toggle1").attr("aria-expanded","true");
+
+
+
+
+//     $(function() {
+//   $('button.navbar-toggle').click(function() {
+//     var value = $('#main-content').css('padding-top');
+//     if (value === '70px') {
+//       $('#main-content').css('padding-top', '+=235');
+//     } else {
+//       $('#main-content').css('padding-top', '70');
+//     }
+//   });
+// });
 
 
 </script>

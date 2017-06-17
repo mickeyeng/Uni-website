@@ -14,6 +14,8 @@
     
   </head>
   <body>
+  <div id="element"></div>
+
   <div class="wrapper">
   <?php
   include "includes/navbar.inc.php";
@@ -35,7 +37,7 @@
           <?php
           if (isset($_SESSION['id'])) {
           echo $_SESSION['id'];
-          echo "<div id='element' class='introLoading'></div>";
+          echo "";
           } else {
           echo "You are not logged in ";
           }
@@ -47,7 +49,6 @@
     <?php include "includes/footer.inc.php";?>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="../js/index.js"></script>
-    </div>
     </div>
    </body>
 </html>
