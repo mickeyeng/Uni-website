@@ -64,6 +64,7 @@
     <div class="container" style="width:900px;">
    <h1 align="center"  id="heading"><strong>List view for Services</strong></h1>
    <!-- <hr id="hr_main"> -->
+   <div class="container">
    <?php
    include "db_handler.php";
 
@@ -102,6 +103,7 @@
         }
 
    ?>
+  </div>
   </div>
   </section>
 
